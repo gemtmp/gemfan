@@ -170,6 +170,7 @@ System::State System::readTemp() {
     if (delta < val - r->target()) {
       ret = val;
       temp = r;
+      delta = val - r->target();
     }
   }
   return {ret, 0, *temp};
